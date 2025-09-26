@@ -22,5 +22,21 @@ public class UserService {
         return repository.findAll();
     }
 
+    public User update(User user){
+        var userSaved = repository.save(user);
+        return userSaved;
+    }
+
+    public void deleteUserById(Long id){
+        repository.deleteById(id);
+    }
+
+    public User findUserById(Long id){
+        return repository.findById(id).get();
+    }
+
+
+
+
 
 }
