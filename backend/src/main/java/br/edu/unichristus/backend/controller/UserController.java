@@ -1,5 +1,6 @@
 package br.edu.unichristus.backend.controller;
 
+import br.edu.unichristus.backend.domain.dto.UserDTO;
 import br.edu.unichristus.backend.domain.model.User;
 import br.edu.unichristus.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,9 @@
 package br.edu.unichristus.backend.service;
 
+import br.edu.unichristus.backend.domain.dto.UserDTO;
 import br.edu.unichristus.backend.domain.model.User;
 import br.edu.unichristus.backend.repository.UserRepository;
+import br.edu.unichristus.backend.util.MapperUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
