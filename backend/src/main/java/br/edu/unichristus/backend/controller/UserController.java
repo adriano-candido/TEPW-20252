@@ -1,6 +1,7 @@
 package br.edu.unichristus.backend.controller;
 
 import br.edu.unichristus.backend.domain.dto.UserDTO;
+import br.edu.unichristus.backend.domain.dto.UserLowDTO;
 import br.edu.unichristus.backend.domain.model.User;
 import br.edu.unichristus.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +17,17 @@ public class UserController {
     private UserService service;
 
     @PostMapping
-    public User create(@RequestBody User user){
+    public UserDTO create(@RequestBody UserDTO user){
         return service.create(user);
     }
 
     @GetMapping("/all")
-    public List<User> getAll(){
+    public List<UserLowDTO> getAll(){
         return service.getAll();
     }
 
     @PutMapping
-    public User update(@RequestBody User user){
+    public UserDTO update(@RequestBody UserDTO user){
         return service.update(user);
     }
 
@@ -36,7 +37,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User findById(@PathVariable(name = "id") Long id){
+    public UserLowDTO findById(@PathVariable(name = "id") Long id){
        return service.findUserById(id);
     }
 
