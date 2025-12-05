@@ -35,10 +35,10 @@ public class UserService {
         return MapperUtil.parseObject(userPersist, UserDTO.class);
     }
 
-    public List<UserLowDTO> getAll(){
+    public List<UserDTO> getAll(){
 
         return MapperUtil.parseListObjects
-                (repository.findAll(), UserLowDTO.class);
+                (repository.findAll(), UserDTO.class);
     }
 
     public UserDTO update(UserDTO dto){
